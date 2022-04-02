@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
    Question[] _questions = null;
    public Question[] Questions { get { return _questions; } }
-
    [SerializeField] GameEvents events = null;
 
    private List<AnswerData> PickedAnswers = new List<AnswerData>();
@@ -22,7 +21,7 @@ public class GameManager : MonoBehaviour
             Debug.Log(question.Info);
         }
 
-        //Display();
+        Display();
     }
     public void EraseAnswers ()
     {
