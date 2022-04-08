@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c46929ed4c8fd45b549a1415af9a13, type: 3}
   m_Name: New Question 2
   m_EditorClassIdentifier: 
-  _info: 
-  _answers: []
-  _useTimes: 0
-  _timer: 0
+  _info: Da li je Konstantin debil?
+  _answers:
+  - _info: da
+    _isCorrect: 1
+  - _info: ne
+    _isCorrect: 0
+  _useTimes: 1
+  _timer: 20
   _answerType: 0
   _addScore: 10

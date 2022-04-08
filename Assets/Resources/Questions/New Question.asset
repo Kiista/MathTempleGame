@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: New Question
   m_EditorClassIdentifier: 
   _info: 2 + 2 = ?
-  _answers: []
-  _useTimes: 0
-  _timer: 0
+  _answers:
+  - _info: 1
+    _isCorrect: 0
+  - _info: 4
+    _isCorrect: 1
+  _useTimes: 1
+  _timer: 16
   _answerType: 0
   _addScore: 10

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class AnswerData : MonoBehaviour
 {
     [Header("UI Elements")]
-    [SerializeField] TextMeshPro infoTextObject;
+    [SerializeField] TextMeshProUGUI infoTextObject;
     [SerializeField] Image toggle;
 
     [Header("Textures")]
