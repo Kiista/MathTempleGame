@@ -276,7 +276,7 @@ public class GameManager : MonoBehaviour
             do
             {
                 random = UnityEngine.Random.Range(0, data.Questions.Length);
-            } while (FinishedQuestions.Contains(random) & random == currentQuestion);
+            } while (FinishedQuestions.Contains(random) || random == currentQuestion);
         }
         return random;
     }
