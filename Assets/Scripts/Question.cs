@@ -1,42 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum AnswerType { Multi, Single }
+
 [System.Serializable]
-public struct Answer
+public class Answer
 {
-    [SerializeField] private string _info;
-    public string Info { get { return _info; } }
+    public string     Info = string.Empty;
+    public bool       IsCorrect = false;
 
-    [SerializeField] private bool _isCorrect;
-    public bool IsCorrect { get { return _isCorrect; } }
-
+    public Answer () { }
 }
-[CreateAssetMenu(fileName = "New Question", menuName = "Quiz/new Question")]
-
-public class Question : ScriptableObject
+[System.Serializable]
+public class Question
 {
-    public enum AnswerType { Multi, Single}
+    public String     info     = null;
+    public Answer[]   Answers  = null;
+    public Boolean    UseTimer = false;
+    public Int32      Timer    = 0;
+    public AnswerType Type     = AnswerType.Single;
+    public Int32      AddScore = 0;
 
-    [SerializeField] private string _info = string.Empty;
-    public string Info { get { return _info; } }
-
-    [SerializeField] Answer[] _answers = null;
-    public Answer[] Answers { get { return _answers; } }
-
-    //Parametri
-
-    [SerializeField] private bool _useTimes = false;
-    public bool UseTimes { get { return _useTimes; } }
-
-    [SerializeField] private int _timer = 0;
-    public int Timer { get { return _timer; } }
-
-    [SerializeField] private AnswerType _answerType = AnswerType.Multi;
-    public AnswerType GetAnswerType { get { return _answerType; } }
-
-    [SerializeField] private int _addScore = 10;
-    public int AddScore { get { return _addScore; } }
+    public Question() { }
 
     public List<int> GetCorrectAnswers ()
     {

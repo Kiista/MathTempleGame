@@ -1,9 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class GameUtility : MonoBehaviour
+using System.IO;
+using System.Xml.Serialization;
+public class GameUtility
 {
     public const float ResolutionDelayTime = 1;
     public const string SavePrefKey = "Game_HighScore_Value";
+
+    public const string xmlFileName = "QuestionsData.xml";
+    public static string XmlFilePath
+    {
+        get
+        {
+            return Application.dataPath + "/" + xmlFileName;
+        }
+    }
+
+}
+
+[System.Serializable()]
+public class Data
+{
+    public Question[] Questions = null;
+
+    public Data () { }
+    
+    public static void Write(Data data)
+    {
+        XmlSerializer serializer = new XmlSerializer(typeof(Data));
+        using (Stream stream = new FileStream(GameUtility.XmlFilePath, FileMode.Create))
+        {
+            serializer.Serialize(stream, data);
+        }
+    }
+    public static Data Fetch()
+    {
+        XmlSerializer deserializer = new XmlSerializer (typeof(Data));
+        using (Stream stream = new FileStream(GameUtility.XmlFilePath, FileMode.Open)) 
+        {
+            var data = (Data)deserializer.Deserialize(stream);
+
+            return data;
+        }
+    }
 }

@@ -93,21 +93,24 @@ public class UIManager : MonoBehaviour
     {
         events.UpdateQuestionUI += UpdateQuestionUI;
         events.DisplayResolutionScreen += DisplayResolution;
+        events.ScoreUpdated += UpdateScoreUI;
 
     }
     void OnDisable()
     {
         events.UpdateQuestionUI -= UpdateQuestionUI;
         events.DisplayResolutionScreen -= DisplayResolution;
+        events.ScoreUpdated -= UpdateScoreUI;
     }
 
     private void Start()
     {
+        UpdateScoreUI();
         resStateParaHash = Animator.StringToHash("ScreenState");
     }
     void UpdateQuestionUI(Question question)
     {
-        uIElements.QuestionInfoTextObject.text = question.Info;
+        uIElements.QuestionInfoTextObject.text = question.info;
         CreateAnswers(question);
 
     }
@@ -159,7 +162,7 @@ public class UIManager : MonoBehaviour
                 StartCoroutine(CalculateScore());
                 uIElements.FinishUIElements.gameObject.SetActive(true);
                 uIElements.HighScoreText.gameObject.SetActive(true);
-                uIElements.HighScoreText.text = ((highscore > events.StartupHighScore) ? "<color = yellow>new </color>" : String.Empty) + "Highscore:" + highscore;
+                uIElements.HighScoreText.text = ((highscore > events.StartupHighScore) ? "new " : String.Empty) + "Highscore:" + highscore;
                 break;
         }
     }
@@ -204,4 +207,8 @@ public class UIManager : MonoBehaviour
         currentAnswers.Clear();
     }
 
+    void UpdateScoreUI()
+    {
+        uIElements.ScoreText.text = "Score: " + events.CurrentFinalScore;
+    }
 }

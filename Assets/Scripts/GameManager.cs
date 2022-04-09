@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    Question[] _questions = null;
-    public Question[] Questions { get { return _questions; } }
+    private Data data = new Data();
 
     [SerializeField] GameEvents events = null;
 
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            return (FinishedQuestions.Count < Questions.Length) ? false : true;
+            return (FinishedQuestions.Count < data.Questions.Length) ? false : true;
         }
     }
 
@@ -44,12 +44,18 @@ public class GameManager : MonoBehaviour
         events.UpdateQuestionAnswer -= UpdateAnswers;
     }
 
+    private void Awake()
+    {
+        events.CurrentFinalScore = 0;
+    }
     private void Start()
     {
-        timerDefaultColor = timerText.color;
-        LoadQuestions();
 
-        events.CurrentFinalScore = 0;
+        events.StartupHighScore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);
+
+        timerDefaultColor = timerText.color;
+        LoadData();
+
 
         timerStateParaHash = Animator.StringToHash("TimerState");
 
@@ -61,7 +67,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateAnswers(AnswerData newAnswer)
     {
-        if (Questions[currentQuestion].GetAnswerType == Question.AnswerType.Single)
+        if (data.Questions[currentQuestion].Type == AnswerType.Single)
         {
             foreach (var answer in PickedAnswers)
             {
@@ -69,9 +75,9 @@ public class GameManager : MonoBehaviour
                 {
                     answer.Reset();
                 }
-                PickedAnswers.Clear();
-                PickedAnswers.Add(newAnswer);
             }
+            PickedAnswers.Clear();
+            PickedAnswers.Add(newAnswer);
         }
         else
         {
@@ -102,9 +108,9 @@ public class GameManager : MonoBehaviour
             events.UpdateQuestionUI(question);
         }
 
-        if (question.UseTimes)
+        if (question.UseTimer)
         {
-            UpdateTimer(question.UseTimes);
+            UpdateTimer(question.UseTimer);
         }
     }
 
@@ -114,21 +120,33 @@ public class GameManager : MonoBehaviour
         bool isCorrect = CheckAnswers();
         FinishedQuestions.Add(currentQuestion);
 
-        UpdateScore((isCorrect) ? Questions[currentQuestion].AddScore : -Questions[currentQuestion].AddScore);
+        UpdateScore((isCorrect) ? data.Questions[currentQuestion].AddScore : -data.Questions[currentQuestion].AddScore);
+
+        if (IsFinished)
+        {
+            SetHighScore();
+        }
 
         var type = (IsFinished) ? UIManager.ResolutionScreenType.Finish : (isCorrect) ? UIManager.ResolutionScreenType.Correct : UIManager.ResolutionScreenType.Incorrect;
 
         if (events.DisplayResolutionScreen != null)
         {
-            events.DisplayResolutionScreen(type, Questions[currentQuestion].AddScore);
+            events.DisplayResolutionScreen(type, data.Questions[currentQuestion].AddScore);
         }
 
-        if (IE_WaitTillNextRound != null)
+        //AudioManager.instance.PlaySound((isCorrect) ? "CorrectSFX" : "IncorrectSFX");
+
+        if (type != UIManager.ResolutionScreenType.Finish)
         {
-            StopCoroutine(IE_WaitTillNextRound);
+
+            if (IE_WaitTillNextRound != null)
+            {
+                StopCoroutine(IE_WaitTillNextRound);
+            }
+            IE_WaitTillNextRound = WaitTillNextRound();
+            StartCoroutine(IE_WaitTillNextRound);
         }
-        IE_WaitTillNextRound = WaitTillNextRound();
-        StartCoroutine(IE_WaitTillNextRound);
+
     }
 
     private void UpdateTimer(bool state)
@@ -155,13 +173,15 @@ public class GameManager : MonoBehaviour
 
     IEnumerator StartTimer()
     {
-        var totalTime = Questions[currentQuestion].Timer;
+        var totalTime = data.Questions[currentQuestion].Timer;
         var timeLeft = totalTime;
 
         timerText.color = timerDefaultColor;
         while (timeLeft > 0)
         {
             timeLeft--;
+
+            //AudioManager.instance.PlaySound("CountdownSFX");
 
             if (timeLeft < totalTime / 2 && timeLeft > totalTime /4)
             {
@@ -188,16 +208,16 @@ public class GameManager : MonoBehaviour
         var randomIndex = GetRandomQuestionIndex();
         currentQuestion = randomIndex;
 
-        return Questions[currentQuestion];
+        return data.Questions[currentQuestion];
     }
     int GetRandomQuestionIndex ()
     {
         var random = 0;
-        if(FinishedQuestions.Count < Questions.Length)
+        if(FinishedQuestions.Count < data.Questions.Length)
         {
             do
             {
-                random = UnityEngine.Random.Range(0, Questions.Length);
+                random = UnityEngine.Random.Range(0, data.Questions.Length);
             } while (FinishedQuestions.Contains(random) & random == currentQuestion);
         }
         return random;
@@ -215,7 +235,7 @@ public class GameManager : MonoBehaviour
     {
         if (PickedAnswers.Count > 0)
         {
-            List<int> c = Questions[currentQuestion].GetCorrectAnswers();
+            List<int> c = data.Questions[currentQuestion].GetCorrectAnswers();
             List<int> p = PickedAnswers.Select(x => x.AnswerIndex).ToList();
 
             var f = c.Except(p).ToList();
@@ -226,17 +246,29 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
-    void LoadQuestions ()
+    void LoadData ()
     {
-        Object[] objs = Resources.LoadAll("Questions", typeof(Question));
-        _questions = new Question[objs.Length];
-         for (int i = 0; i < objs.Length; i++)
-        {
-            _questions[i] = (Question)objs[i];
-        }
-
+        data = Data.Fetch();
     }
 
+    public void RestartAGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    private void SetHighScore()
+    {
+        var highscore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);
+        if (highscore < events.CurrentFinalScore)
+        {
+            PlayerPrefs.SetInt(GameUtility.SavePrefKey, events.CurrentFinalScore);
+        }
+    }
+         
     private void UpdateScore (int add)
     {
         events.CurrentFinalScore += add;
