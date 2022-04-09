@@ -7,6 +7,8 @@ public class DataCreator_Window : EditorWindow
 {
     [SerializeField] Data data = new Data();
 
+    private Vector2 scrollPosition = Vector2.zero;
+
     SerializedObject serializedObject = null;
     SerializedProperty questionsProp = null;
 
@@ -51,8 +53,56 @@ public class DataCreator_Window : EditorWindow
 
         #region Body Section
 
-        Rect bodyRect = new Rect(15, (headerRect.y + headerRect.height) + 15, this.position.width - 30, this.position.height - (headerRect.y + headerRect.height) -80 );
+
+        Rect bodyRect = new Rect(15, (headerRect.y + headerRect.height) + 20, this.position.width - 30, this.position.height - (headerRect.y + headerRect.height) - 80);
         GUI.Box(bodyRect, GUIContent.none);
+
+        var arraySize = data.Questions.Length;
+
+        Rect viewRect = new Rect(bodyRect.x + 10, bodyRect.y + 10, bodyRect.width - 20,
+            EditorGUI.GetPropertyHeight(questionsProp));
+
+        Rect scrollPositionRect = new Rect(viewRect)
+        {
+            height = bodyRect.height - 20
+        };
+
+        scrollPosition = GUI.BeginScrollView(scrollPositionRect, scrollPosition, viewRect, false, false,
+            GUIStyle.none, GUI.skin.verticalScrollbar);
+
+        var drawSlider = viewRect.height > scrollPositionRect.height;
+
+        Rect propertyRect = new Rect(bodyRect.x + 10, bodyRect.y + 10, bodyRect.width - (drawSlider ? 40 : 20), 17);
+        EditorGUI.PropertyField(propertyRect, questionsProp, true);
+
+        serializedObject.ApplyModifiedProperties();
+
+        GUI.EndScrollView();
+
+        #endregion
+
+        #region Navigation 
+
+        Rect buttonRect = new Rect(bodyRect.x + bodyRect.width - 85, bodyRect.y + bodyRect.height + 15, 85, 30);
+
+        bool pressed = GUI.Button(buttonRect, "Create", EditorStyles.miniButtonRight);
+        if (pressed)
+        {
+            Data.Write(data);
+        }
+        buttonRect.x -= buttonRect.width;
+        pressed = GUI.Button(buttonRect, "Fetch", EditorStyles.miniButtonLeft);
+        if (pressed)
+        {
+            var d = Data.Fetch(out bool result);
+            if (result)
+            {
+                data = d;
+            }
+
+            serializedObject.ApplyModifiedProperties();
+            serializedObject.Update();
+        }
 
         #endregion
     }

@@ -203,25 +203,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(GameUtility.ResolutionDelayTime);
         Display ();
     }
-   Question GetRandomQuestion()
-    {
-        var randomIndex = GetRandomQuestionIndex();
-        currentQuestion = randomIndex;
-
-        return data.Questions[currentQuestion];
-    }
-    int GetRandomQuestionIndex ()
-    {
-        var random = 0;
-        if(FinishedQuestions.Count < data.Questions.Length)
-        {
-            do
-            {
-                random = UnityEngine.Random.Range(0, data.Questions.Length);
-            } while (FinishedQuestions.Contains(random) & random == currentQuestion);
-        }
-        return random;
-    }
+  
 
     bool CheckAnswers()
     {
@@ -272,10 +254,30 @@ public class GameManager : MonoBehaviour
     private void UpdateScore (int add)
     {
         events.CurrentFinalScore += add;
-
-        if (events.ScoreUpdated != null)
+        if (events.CurrentFinalScore < 0)
         {
-            events.ScoreUpdated();
+            events.CurrentFinalScore = 0;
         }
+        events.ScoreUpdated?.Invoke();
+    }
+
+    Question GetRandomQuestion()
+    {
+        var randomIndex = GetRandomQuestionIndex();
+        currentQuestion = randomIndex;
+
+        return data.Questions[currentQuestion];
+    }
+    int GetRandomQuestionIndex()
+    {
+        var random = 0;
+        if (FinishedQuestions.Count < data.Questions.Length)
+        {
+            do
+            {
+                random = UnityEngine.Random.Range(0, data.Questions.Length);
+            } while (FinishedQuestions.Contains(random) & random == currentQuestion);
+        }
+        return random;
     }
 }

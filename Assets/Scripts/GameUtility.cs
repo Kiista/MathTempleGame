@@ -20,7 +20,7 @@ public class GameUtility
 [System.Serializable()]
 public class Data
 {
-    public Question[] Questions = null;
+    public Question[] Questions = new Question[0];
 
     public Data () { }
     
@@ -32,13 +32,23 @@ public class Data
             serializer.Serialize(stream, data);
         }
     }
+
     public static Data Fetch()
     {
+        return Fetch(out bool result);
+    }
+    public static Data Fetch(out bool result )
+    {
+        if (!File.Exists(GameUtility.XmlFilePath)) 
+        {
+            result = false; return new Data();
+        }
         XmlSerializer deserializer = new XmlSerializer (typeof(Data));
         using (Stream stream = new FileStream(GameUtility.XmlFilePath, FileMode.Open)) 
         {
             var data = (Data)deserializer.Deserialize(stream);
 
+            result = true;
             return data;
         }
     }
