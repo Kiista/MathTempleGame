@@ -31,9 +31,14 @@ public struct UIElements
     [SerializeField] TextMeshProUGUI questionInfoTextObject;
     public TextMeshProUGUI QuestionInfoTextObject { get { return questionInfoTextObject; } }
 
-    [Header("scoreText")]
-    [SerializeField] TextMeshProUGUI scoreText;
-    public TextMeshProUGUI ScoreText { get { return scoreText; } }
+    [Header("P1scoreText")]
+    [SerializeField] TextMeshProUGUI P1scoreText;
+    public TextMeshProUGUI P1ScoreText { get { return P1scoreText; } }
+
+    [Header("P2scoreText")]
+    [SerializeField] TextMeshProUGUI P2scoreText;
+    public TextMeshProUGUI P2ScoreText { get { return P2scoreText; } }
+
     [Space]
 
     [SerializeField] Animator resolutionScreenAnimator;
@@ -76,6 +81,9 @@ public class UIManager : MonoBehaviour
     [Header("Answer Prefabs")]
     [SerializeField] AnswerData answerPrefab;
 
+    [Header("Game Manager")]
+    [SerializeField] GameManager masterManager;
+
 
     [Space]
     [SerializeField] UIElements uIElements;
@@ -83,6 +91,8 @@ public class UIManager : MonoBehaviour
     [Space]
     [SerializeField] UIManagerParametres parameters;
 
+    private PlayerData currentPlayerData;
+    private GameManager gameManager;
 
     List<AnswerData> currentAnswers = new List<AnswerData>();
     private int resStateParaHash = 0;
@@ -105,7 +115,13 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateScoreUI(0);
+        gameManager = FindObjectOfType<GameManager>();
+        currentPlayerData = gameManager.player1;
+
+        uIElements.P1ScoreText.text = "Player 1 Score: " + gameManager.player1.numberOfCorrectAnswers;
+        uIElements.P2ScoreText.text = "Player 2 Score: " + gameManager.player2.numberOfCorrectAnswers;
+
+        UpdateScoreUI(currentPlayerData.numberOfCorrectAnswers);
         resStateParaHash = Animator.StringToHash("ScreenState");
     }
     void UpdateQuestionUI(Question question)
@@ -218,6 +234,25 @@ public class UIManager : MonoBehaviour
 
     void UpdateScoreUI(int score)
     {
-        uIElements.ScoreText.text = "Score: " + score;
+        if (currentPlayerData == gameManager.player1)
+        {
+            uIElements.P2ScoreText.text = "Player 2 Score: " + gameManager.player2.numberOfCorrectAnswers;
+        }
+        else
+        {
+            
+            uIElements.P1ScoreText.text = "Player 1 Score: " + gameManager.player1.numberOfCorrectAnswers;
+        }
+        if (currentPlayerData == gameManager.player2)
+        {
+            uIElements.P2ScoreText.text = "Player 2 Score: " + gameManager.player2.numberOfCorrectAnswers;
+        }
+        else
+        {
+            
+            uIElements.P1ScoreText.text = "Player 1 Score: " + gameManager.player1.numberOfCorrectAnswers;
+        }
+       
+            
     }
 }

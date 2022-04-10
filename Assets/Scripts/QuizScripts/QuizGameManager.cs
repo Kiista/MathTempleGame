@@ -247,15 +247,6 @@ public class QuizGameManager : MonoBehaviour
         data = Data.Fetch();
     }
 
-    public void RestartAGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
-
     private void SetHighScore()
     {
         var highscore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);
