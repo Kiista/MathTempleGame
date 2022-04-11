@@ -16,8 +16,7 @@
       <UseTimer>true</UseTimer>
       <Timer>5</Timer>
       <Type>Single</Type>
-      <AddScore>15</AddScore>
-      <checkIfUsed>false</checkIfUsed>
+      <AddScore>1</AddScore>
     </Question>
     <Question>
       <info>2x2 = ?</info>
@@ -34,8 +33,7 @@
       <UseTimer>true</UseTimer>
       <Timer>15</Timer>
       <Type>Single</Type>
-      <AddScore>20</AddScore>
-      <checkIfUsed>false</checkIfUsed>
+      <AddScore>1</AddScore>
     </Question>
     <Question>
       <info>Sta Je Najveci Dvocifreni Broj</info>
@@ -68,8 +66,7 @@
       <UseTimer>true</UseTimer>
       <Timer>15</Timer>
       <Type>Single</Type>
-      <AddScore>20</AddScore>
-      <checkIfUsed>false</checkIfUsed>
+      <AddScore>1</AddScore>
     </Question>
     <Question>
       <info>Pitas Me Skoljo Sa Biserom Ti: "Vredim Li Ja Ista?" I Znam Da Cu Cudno Odgovoriti, Ali Jos Uvek Ne Vredis - Nista. Sta Sam, Ko Sam, Koje Mi Je Ime?  Odacu Ti, Mocan Sam Broj, Da Li Ces Se Pozabaviti Time?</info>
@@ -94,8 +91,7 @@
       <UseTimer>true</UseTimer>
       <Timer>30</Timer>
       <Type>Single</Type>
-      <AddScore>15</AddScore>
-      <checkIfUsed>false</checkIfUsed>
+      <AddScore>1</AddScore>
     </Question>
     <Question>
       <info>Sta Je Tacno?</info>
@@ -112,8 +108,7 @@
       <UseTimer>true</UseTimer>
       <Timer>15</Timer>
       <Type>Multi</Type>
-      <AddScore>10</AddScore>
-      <checkIfUsed>false</checkIfUsed>
+      <AddScore>1</AddScore>
     </Question>
   </Questions>
 </Data>
