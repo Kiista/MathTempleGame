@@ -1,23 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class PuzzleSlot : MonoBehaviour, IDropHandler
 {
+    private PuzzlePiece heldPiece;
+
+    private RectTransform rectTransform;
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
     }
 
-    private RectTransform rectTransform;
-
     public void OnDrop(PointerEventData eventData)
     {
-        if(eventData.pointerDrag != null)
+        var dragObject = eventData.pointerDrag;
+        if (dragObject != null)
         {
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = rectTransform.anchoredPosition;
+            dragObject.GetComponent<RectTransform>().anchoredPosition = rectTransform.anchoredPosition;
+            heldPiece = dragObject.GetComponent<PuzzlePiece>();
+            heldPiece.SetSlot(this);
         }
+
         Debug.Log("Oasdasdas");
+    }
+
+    public PuzzlePiece GetPiece()
+    {
+        return heldPiece;
+    }
+
+    public void Clear()
+    {
+        heldPiece = null;
     }
 }
