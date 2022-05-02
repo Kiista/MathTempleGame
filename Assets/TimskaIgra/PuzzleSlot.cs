@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class PuzzleSlot : MonoBehaviour
+public class PuzzleSlot : MonoBehaviour, IDropHandler
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        rectTransform = GetComponent<RectTransform>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private RectTransform rectTransform;
+
+    public void OnDrop(PointerEventData eventData)
     {
-        
+        if(eventData.pointerDrag != null)
+        {
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = rectTransform.anchoredPosition;
+        }
+        Debug.Log("Oasdasdas");
     }
 }
