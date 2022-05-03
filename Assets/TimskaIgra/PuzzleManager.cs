@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PuzzleManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private PuzzlePiece[] pieces;
     [SerializeField] private int[] numbers;
     [SerializeField] private Text sumText;
+    [SerializeField] private GameObject winScreen;
 
     private void Start()
     {
@@ -36,6 +38,11 @@ public class PuzzleManager : MonoBehaviour
             if (puzzlePiece != null) sum += puzzlePiece.GetNumber();
         }
 
+        if (sum == 20)
+        {
+            winScreen.SetActive(true);
+            return;
+        }
         sumText.text = $"{sum}";
     }
 }
