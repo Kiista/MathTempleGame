@@ -11,9 +11,9 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private int[] numbers;
     [SerializeField] private Text sumText;
     [SerializeField] private GameObject winScreen;
-
     [SerializeField] Text loseText;
-    public Text LoseText { get { return loseText; } }
+    [SerializeField] GameObject endScreenButton;
+    [SerializeField] GameObject playAgainButton;
 
     private void Start()
     {
@@ -33,22 +33,30 @@ public class PuzzleManager : MonoBehaviour
     private void ShowSum()
     {
         var sum = 0;
+        bool filled = true;
 
         foreach (var puzzleSlot in slots)
         {
             var puzzlePiece = puzzleSlot.GetPiece();
 
             if (puzzlePiece != null) sum += puzzlePiece.GetNumber();
+            else
+            {
+                filled = false;
+            } 
         }
 
-        if (sum == 20)
+        if (sum == 20 && filled)
         {
             winScreen.SetActive(true);
+            playAgainButton.SetActive(false);
         }
-        else if (sum != 20)
+        else if (sum != 20 && filled)
         {
             winScreen.SetActive(true);
             loseText.text = "Probaj Ponovo";
+            endScreenButton.SetActive(false);
+            
         }
         sumText.text = $"{sum}";
     }
