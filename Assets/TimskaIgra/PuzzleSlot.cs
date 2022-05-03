@@ -17,7 +17,7 @@ public class PuzzleSlot : MonoBehaviour, IDropHandler
         var dragObject = eventData.pointerDrag;
         if (dragObject != null)
         {
-            dragObject.GetComponent<RectTransform>().anchoredPosition = rectTransform.anchoredPosition;
+            dragObject.GetComponent<RectTransform>().position = rectTransform.position;
             heldPiece = dragObject.GetComponent<PuzzlePiece>();
             heldPiece.SetSlot(this);
         }
