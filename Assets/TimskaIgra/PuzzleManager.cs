@@ -12,6 +12,9 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private Text sumText;
     [SerializeField] private GameObject winScreen;
 
+    [SerializeField] Text loseText;
+    public Text LoseText { get { return loseText; } }
+
     private void Start()
     {
         pieces = pieces.OrderBy(puzzlePiece => Guid.NewGuid()).ToArray();
@@ -41,7 +44,11 @@ public class PuzzleManager : MonoBehaviour
         if (sum == 20)
         {
             winScreen.SetActive(true);
-            return;
+        }
+        else if (sum != 20)
+        {
+            winScreen.SetActive(true);
+            loseText.text = "Probaj Ponovo";
         }
         sumText.text = $"{sum}";
     }
