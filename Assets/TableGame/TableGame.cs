@@ -10,7 +10,7 @@ public class TableGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            CustomSceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

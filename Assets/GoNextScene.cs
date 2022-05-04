@@ -7,6 +7,6 @@ public class GoNextScene : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        CustomSceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
