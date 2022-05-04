@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{19E53EA2-487A-0524-EA88-047476C72ED6}</ProjectGuid>
+    <ProjectGuid>{8FF2B2E8-34C2-7BF5-570E-6C614B07D8A4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\PlayerData.cs" />
     <Compile Include="Assets\GoNextScene.cs" />
     <Compile Include="Assets\Scripts\QuizScripts\AudioManager.cs" />
+    <Compile Include="Assets\TableGame\TableGame.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\WinScreen.cs" />
     <Compile Include="Assets\Scripts\QuizScripts\GameUtility.cs" />
@@ -108,7 +109,6 @@
     <Compile Include="Assets\Scripts\QuizScripts\AnswerData.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\TableGame\TableGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
