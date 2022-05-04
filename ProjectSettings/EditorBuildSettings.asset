@@ -5,12 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 83b36272a6344164d8ddac2e698c0e45
+  - enabled: 1
+    path: Assets/Scenes/AfterPlay.unity
+    guid: 5f4bf3e74a3c4b342937e361394c688d
+  - enabled: 1
+    path: Assets/Scenes/IntroStory.unity
+    guid: dcd81703294ea254bb149a189b51b3b2
+  - enabled: 1
+    path: Assets/Scenes/BeforeTeamPuzzle.unity
+    guid: 426cc2cc00cbef941b4a155fada61823
+  - enabled: 1
+    path: Assets/Scenes/TeamPuzzle.unity
+    guid: bcef486d812c0204d905008d7996dd3e
+  - enabled: 1
+    path: Assets/Scenes/CalendarGame.unity
+    guid: 0484d5ee6d5dc2c42aa13629a571363b
+  - enabled: 1
+    path: Assets/Scenes/AfterCalendar.unity
+    guid: 3f47ff9afd8b69446a2a96dd955f4a3a
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: c829caaf5c740d84485d7ab77de79037

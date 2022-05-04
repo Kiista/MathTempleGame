@@ -104,6 +104,10 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\WinScreen.cs" />
+    <Compile Include="Assets\KalendarIgra\CalendarManager.cs" />
+    <Compile Include="Assets\KalendarIgra\Dial.cs" />
+    <Compile Include="Assets\IntroStory\NextScene.cs" />
+    <Compile Include="Assets\GoNextScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
