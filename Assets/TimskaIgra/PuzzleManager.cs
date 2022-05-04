@@ -48,13 +48,11 @@ public class PuzzleManager : MonoBehaviour
 
         if (sum == 20 && filled)
         {
-            winScreen.SetActive(true);
-            playAgainButton.SetActive(false);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else if (sum != 20 && filled)
         {
             winScreen.SetActive(true);
-            loseText.text = "Probaj Ponovo";
             endScreenButton.SetActive(false);
             
         }
