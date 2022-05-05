@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/AfterTableGame.unity
     guid: dc52be97b618a754c81a71f8ad63a722
   - enabled: 1
+    path: Assets/Scenes/MarketGame.unity
+    guid: 2544102d8cb549b4dbbf01b4a7917c5e
+  - enabled: 1
     path: Assets/Scenes/BeforeTeamPuzzle.unity
     guid: 426cc2cc00cbef941b4a155fada61823
   - enabled: 1
@@ -35,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: c829caaf5c740d84485d7ab77de79037
+  - enabled: 1
+    path: Assets/Scenes/LastScene1.unity
+    guid: 9aa99951c2c10a4468f413b0e524739a
+  - enabled: 1
+    path: Assets/Scenes/LastScene1 1.unity
+    guid: 436b39913ac71e449bb50b10b1a1cb9a
   m_configObjects: {}
