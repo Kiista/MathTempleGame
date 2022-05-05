@@ -2,77 +2,7 @@
 <Data xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Questions>
     <Question>
-      <info>2-2 = ?</info>
-      <Answers>
-        <Answer>
-          <Info>0</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>4</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-      </Answers>
-      <UseTimer>true</UseTimer>
-      <Timer>5</Timer>
-      <Type>Single</Type>
-      <AddScore>15</AddScore>
-      <checkIfUsed>false</checkIfUsed>
-    </Question>
-    <Question>
-      <info>2x2 = ?</info>
-      <Answers>
-        <Answer>
-          <Info>4</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>8</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-      </Answers>
-      <UseTimer>true</UseTimer>
-      <Timer>15</Timer>
-      <Type>Single</Type>
-      <AddScore>20</AddScore>
-      <checkIfUsed>false</checkIfUsed>
-    </Question>
-    <Question>
-      <info>Sta Je Najveci Dvocifreni Broj</info>
-      <Answers>
-        <Answer>
-          <Info>90</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>99</Info>
-          <IsCorrect>true</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>100</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>10</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>9</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
-          <Info>0</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-      </Answers>
-      <UseTimer>true</UseTimer>
-      <Timer>15</Timer>
-      <Type>Single</Type>
-      <AddScore>20</AddScore>
-      <checkIfUsed>false</checkIfUsed>
-    </Question>
-    <Question>
-      <info>Pitas Me Skoljo Sa Biserom Ti: "Vredim Li Ja Ista?" I Znam Da Cu Cudno Odgovoriti, Ali Jos Uvek Ne Vredis - Nista. Sta Sam, Ko Sam, Koje Mi Je Ime?  Odacu Ti, Mocan Sam Broj, Da Li Ces Se Pozabaviti Time?</info>
+      <info>Pitas Me Skoljko Sa Biserom Ti: "Vredim Li Ja Ista?" I Znam Da Cu Cudno Odgovoriti, Ali Jos Uvek Ne Vredis - Nista. Sta Sam, Ko Sam, Koje Mi Je Ime?  Odacu Ti, Mocan Sam Broj, Da Li Ces Se Pozabaviti Time?</info>
       <Answers>
         <Answer>
           <Info>0</Info>
@@ -95,25 +25,31 @@
       <Timer>30</Timer>
       <Type>Single</Type>
       <AddScore>15</AddScore>
-      <checkIfUsed>false</checkIfUsed>
     </Question>
     <Question>
-      <info>Sta Je Tacno?</info>
+      <info>Pitas Me Skoljko Sa Biserom Ti: "Vredim Li Ja Ista?" I Znam Da Cu Cudno Odgovoriti, Ali Jos Uvek Ne Vredis - Nista. Sta Sam, Ko Sam, Koje Mi Je Ime?  Odacu Ti, Mocan Sam Broj, Da Li Ces Se Pozabaviti Time?</info>
       <Answers>
         <Answer>
-          <Info>Pitagorina Teorema je : a2 + b2 = c2</Info>
+          <Info>0</Info>
           <IsCorrect>true</IsCorrect>
         </Answer>
         <Answer>
-          <Info>1/2 = 0.5</Info>
-          <IsCorrect>true</IsCorrect>
+          <Info>100</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>10</Info>
+          <IsCorrect>false</IsCorrect>
+        </Answer>
+        <Answer>
+          <Info>1</Info>
+          <IsCorrect>false</IsCorrect>
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>15</Timer>
-      <Type>Multi</Type>
-      <AddScore>10</AddScore>
-      <checkIfUsed>false</checkIfUsed>
+      <Timer>30</Timer>
+      <Type>Single</Type>
+      <AddScore>15</AddScore>
     </Question>
   </Questions>
 </Data>
