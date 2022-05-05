@@ -9,10 +9,6 @@
           <IsCorrect>true</IsCorrect>
         </Answer>
         <Answer>
-          <Info>100</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
           <Info>10</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
@@ -22,7 +18,7 @@
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>30</Timer>
+      <Timer>60</Timer>
       <Type>Single</Type>
       <AddScore>15</AddScore>
     </Question>
@@ -34,10 +30,6 @@
           <IsCorrect>true</IsCorrect>
         </Answer>
         <Answer>
-          <Info>100</Info>
-          <IsCorrect>false</IsCorrect>
-        </Answer>
-        <Answer>
           <Info>10</Info>
           <IsCorrect>false</IsCorrect>
         </Answer>
@@ -47,7 +39,7 @@
         </Answer>
       </Answers>
       <UseTimer>true</UseTimer>
-      <Timer>30</Timer>
+      <Timer>60</Timer>
       <Type>Single</Type>
       <AddScore>15</AddScore>
     </Question>

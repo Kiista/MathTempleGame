@@ -101,10 +101,10 @@ public class QuizGameManager : MonoBehaviour {
         bool isCorrect = CheckAnswers();
 
         if (isCorrect) {
-            CustomSceneManager.LoadScene(9);
+            CustomSceneManager.LoadScene(10);
         }
         else {
-            CustomSceneManager.LoadScene(10);
+            CustomSceneManager.LoadScene(11);
         }
         FinishedQuestions.Add(currentQuestion);
 
