@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class CustomSceneManager : MonoBehaviour {
 
     private static CustomSceneManager instance;
+    [SerializeField] GameObject audioManager;
 
     public static void LoadScene (int sceneIndex) {
         if (instance != null) {
