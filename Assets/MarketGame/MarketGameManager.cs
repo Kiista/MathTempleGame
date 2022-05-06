@@ -11,6 +11,8 @@ public class MarketGameManager : MonoBehaviour
     [SerializeField] private Button hideCodeButton;
     [SerializeField] private GameObject code;
 
+    private bool winCondition = false;
+
 
     private void Start()
     { 
@@ -32,22 +34,19 @@ public class MarketGameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T) && winCondition == true)
         {
             CustomSceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             Debug.Log(weightCheck.text);
+            winCondition = false;
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && winCondition == false)
         {
-            weightCheck.text = "100g Avokada";
+            weightCheck.text = "100g Avokada, \n ovo je tacna tezina, \n sada isplati.";
+            winCondition = true;
         }
-        if (Input.GetKeyUp(KeyCode.Q))
-        {
-            weightCheck.text = "___g Avokada";
-        }
-
 
 
         if (Input.GetKeyDown(KeyCode.W))
