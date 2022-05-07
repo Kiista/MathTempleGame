@@ -16,7 +16,9 @@ public class SceneBackgroundMusic : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
 
-        SceneManager.activeSceneChanged += PlaySongForCurrentScene;
+        SceneManager.activeSceneChanged += PlaySongForChangedScene;
+        PlaySong(sceneBackgroundMusic[SceneManager.GetActiveScene().buildIndex]);
+
     }
 
     private void OnValidate()
@@ -31,13 +33,18 @@ public class SceneBackgroundMusic : MonoBehaviour
         }
     }
 
-    public void PlaySongForCurrentScene(Scene oldScene, Scene newScene)
+    public void PlaySongForChangedScene(Scene oldScene, Scene newScene)
     {
         var newBackgroundClip = sceneBackgroundMusic[newScene.buildIndex];
         if (audioSource.clip != newBackgroundClip && newBackgroundClip != null)
         {
-            audioSource.clip = newBackgroundClip;
-            audioSource.Play();
+            PlaySong(newBackgroundClip);
         }
+    }
+
+    public void PlaySong(AudioClip audioClip)
+    {
+        audioSource.clip = audioClip;
+        audioSource.Play();
     }
 }

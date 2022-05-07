@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class Dial : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerDownHandler {
     
     [SerializeField] private int numberOfSnapPoints;
+    [SerializeField] private AudioClip gearClickClip;
 
     private int chosenValue;
 
@@ -17,7 +18,20 @@ public class Dial : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     private void Awake () {
         // As an example: rotate the attached object
-        OnAngleChanged += (rotation) => transform.localRotation = rotation;
+        OnAngleChanged += (rotation) =>
+        {
+            var zRotation = transform.localRotation.eulerAngles.z;
+            var integerBefore = (int)Mathf.Round(zRotation / 360 * numberOfSnapPoints);
+            zRotation = rotation.eulerAngles.z;
+            var integerAfter = (int)Mathf.Round(zRotation / 360 * numberOfSnapPoints);
+
+            if (integerBefore != integerAfter)
+            {
+                AudioSource.PlayClipAtPoint(gearClickClip, Vector3.zero);
+            }
+
+            transform.localRotation = rotation;
+        };
     }
 
 
@@ -45,6 +59,8 @@ public class Dial : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
         chosenValue = (int) Mathf.Round(zRotation / 360 * numberOfSnapPoints);
         zRotation = chosenValue * 360f / numberOfSnapPoints;
         transform.localRotation = Quaternion.Euler(transform.localRotation.x, transform.localRotation.y, zRotation);
+
+        AudioSource.PlayClipAtPoint(gearClickClip, Vector3.zero);
     }
 
     public void OnDrag (PointerEventData eventData) {

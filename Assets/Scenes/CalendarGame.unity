@@ -253,6 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfSnapPoints: 13
+  gearClickClip: {fileID: 8300000, guid: cac52f157e5bccb4690ca876461c56c2, type: 3}
 --- !u!114 &316517111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,6 +626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfSnapPoints: 20
+  gearClickClip: {fileID: 8300000, guid: cac52f157e5bccb4690ca876461c56c2, type: 3}
 --- !u!114 &815788343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -968,6 +970,7 @@ MonoBehaviour:
   showCodeButton: {fileID: 347052120}
   hideCodeButton: {fileID: 823360997}
   code: {fileID: 1874771900}
+  gearUnlockClip: {fileID: 8300000, guid: 6bf7983670f982d4486be4367220afcb, type: 3}
 --- !u!4 &1066400856
 Transform:
   m_ObjectHideFlags: 0

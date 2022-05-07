@@ -12,6 +12,7 @@ public class CalendarManager : MonoBehaviour
     [SerializeField] private Button showCodeButton;
     [SerializeField] private Button hideCodeButton;
     [SerializeField] private GameObject code;
+    [SerializeField] private AudioClip gearUnlockClip;
 
     private bool gameFinished;
 
@@ -34,11 +35,20 @@ public class CalendarManager : MonoBehaviour
 
     private void Update () 
     {
-        if (outerDial.GetChosenValue() == 5 && innerDial.GetChosenValue() == 12 && !gameFinished) {
-            CustomSceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (outerDial.GetChosenValue() == 5 && innerDial.GetChosenValue() == 12 && !gameFinished)
+        {
+            AudioSource.PlayClipAtPoint(gearUnlockClip, Vector3.zero);
+
+            Invoke("LoadNextScene", 3f);
+
             Debug.Log("POBEDIO SI");
 
             gameFinished = true;
         }
+    }
+
+    private void LoadNextScene()
+    {
+        CustomSceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
