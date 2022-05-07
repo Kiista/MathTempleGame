@@ -256,8 +256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4404ebfd0e6ed194b83741d57e30ed7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 1225291633}
   backgroundImage: {fileID: 214387747}
+  audioManager: {fileID: 1225291633}
 --- !u!114 &214387747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,8 +466,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.972}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.074279785, y: -6.0635986}
-  m_SizeDelta: {x: -3.8431, y: 6.3859}
+  m_AnchoredPosition: {x: 5, y: -14}
+  m_SizeDelta: {x: -67.3472, y: -56.1675}
   m_Pivot: {x: 0.5, y: 0.57780206}
 --- !u!114 &754143470
 MonoBehaviour:
@@ -824,8 +824,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.030288145}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0000076293945}
-  m_SizeDelta: {x: 0, y: 6}
+  m_AnchoredPosition: {x: -0.000030517578, y: -1.0775948}
+  m_SizeDelta: {x: -0.000061035, y: 8.1553}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1257730593
 MonoBehaviour:
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY
+  m_text: IGRAJ
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: debe0ab58c0074f4fb65d9ad019129fe, type: 2}
   m_sharedMaterial: {fileID: 3798547468613148831, guid: debe0ab58c0074f4fb65d9ad019129fe, type: 2}
@@ -874,7 +874,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 110
+  m_fontSize: 85.9
   m_fontSizeBase: 43
   m_fontWeight: 400
   m_enableAutoSizing: 1

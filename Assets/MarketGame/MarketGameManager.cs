@@ -44,40 +44,8 @@ public class MarketGameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q) && winCondition == false)
         {
-            weightCheck.text = "100g Avokada, \n ovo je tacna tezina, \n sada isplati.";
+            weightCheck.text = "100g Avokada, \n ovo je ta?na težina, \n sada isplati.";
             winCondition = true;
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            weightCheck.text = "110g Avokada"; 
-        }
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            weightCheck.text = "___g Avokada";
-        }
-
-
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            weightCheck.text = "90g Avokada";
-        }
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            weightCheck.text = "___g Avokada";
-        }
-
-
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            weightCheck.text = "95g Avokada";
-        }
-        if (Input.GetKeyUp(KeyCode.R))
-        {
-            weightCheck.text = "___g Avokada";
-        }
+        }       
     }
 }

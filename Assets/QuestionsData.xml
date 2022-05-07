@@ -2,7 +2,7 @@
 <Data xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Questions>
     <Question>
-      <info>Pitas Me Skoljko Sa Biserom Ti: "Vredim Li Ja Ista?" I Znam Da Cu Cudno Odgovoriti, Ali Jos Uvek Ne Vredis - Nista. Sta Sam, Ko Sam, Koje Mi Je Ime?  Odacu Ti, Mocan Sam Broj, Da Li Ces Se Pozabaviti Time?</info>
+      <info>Pitaš Me Školjko Sa Biserom Ti: "Vredim Li Ja Išta?"  I Znam Da Ću Čudno Odgovoriti, Ali Još Uvek Ne Vrediš - Ništa. Šta Sam, Ko Sam, Koje Mi Je Ime?  Odaću Ti, Moćan Sam Broj,  Da Li Ćes Se Pozabaviti Time?</info>
       <Answers>
         <Answer>
           <Info>0</Info>
@@ -23,7 +23,7 @@
       <AddScore>15</AddScore>
     </Question>
     <Question>
-      <info>Pitas Me Skoljko Sa Biserom Ti: "Vredim Li Ja Ista?" I Znam Da Cu Cudno Odgovoriti, Ali Jos Uvek Ne Vredis - Nista. Sta Sam, Ko Sam, Koje Mi Je Ime?  Odacu Ti, Mocan Sam Broj, Da Li Ces Se Pozabaviti Time?</info>
+      <info>Pitaš Me Školjko Sa Biserom Ti: "Vredim Li Ja Išta?"  I Znam Da Ću Čudno Odgovoriti, Ali Još Uvek Ne Vrediš - Ništa. Šta Sam, Ko Sam, Koje Mi Je Ime?  Odaću Ti, Moćan Sam Broj,  Da Li Ćes Se Pozabaviti Time?</info>
       <Answers>
         <Answer>
           <Info>0</Info>

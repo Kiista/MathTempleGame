@@ -9,7 +9,7 @@ using UnityEngine.Audio;
 public class CustomSceneManager : MonoBehaviour {
 
     private static CustomSceneManager instance;
-    [SerializeField] GameObject audioManager;
+    
 
     public static void LoadScene (int sceneIndex) {
         if (instance != null) {
@@ -18,6 +18,7 @@ public class CustomSceneManager : MonoBehaviour {
     }
 
     [SerializeField] private Image backgroundImage;
+    [SerializeField] GameObject audioManager;
 
     private void LoadSceneAnimated (int sceneIndex) {
         StartCoroutine(LoadSceneAnimatedCoroutine(sceneIndex));
