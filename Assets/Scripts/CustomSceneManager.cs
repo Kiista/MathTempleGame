@@ -18,7 +18,6 @@ public class CustomSceneManager : MonoBehaviour {
     }
 
     [SerializeField] private Image backgroundImage;
-    [SerializeField] GameObject audioManager;
 
     private void LoadSceneAnimated (int sceneIndex) {
         StartCoroutine(LoadSceneAnimatedCoroutine(sceneIndex));
