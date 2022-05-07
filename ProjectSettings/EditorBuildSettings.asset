@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 83b36272a6344164d8ddac2e698c0e45
   - enabled: 1
+    path: Assets/Scenes/TeamLogo.unity
+    guid: fa81d761532406240b1d440fe4acd83c
+  - enabled: 1
     path: Assets/Scenes/AfterPlay.unity
     guid: 5f4bf3e74a3c4b342937e361394c688d
   - enabled: 1
