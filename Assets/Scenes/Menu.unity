@@ -257,7 +257,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundImage: {fileID: 214387747}
-  backgroundMusic: {fileID: 1257491306}
 --- !u!114 &214387747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -823,16 +822,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4bb1e1e04fb7f0d4eb03e03e2f6d1c61, type: 3}
   - {fileID: 8300000, guid: 10941011bbe3e7e478f662ceade5f4af, type: 3}
   - {fileID: 8300000, guid: 10941011bbe3e7e478f662ceade5f4af, type: 3}
-  - {fileID: 8300000, guid: 10941011bbe3e7e478f662ceade5f4af, type: 3}
-  - {fileID: 8300000, guid: 4e0468fc06c05c8438e8d9de9db3aacd, type: 3}
-  - {fileID: 8300000, guid: 4e0468fc06c05c8438e8d9de9db3aacd, type: 3}
-  - {fileID: 8300000, guid: 7ac37855d97150b49b29b4b83c32b3bb, type: 3}
-  - {fileID: 8300000, guid: 047e31ad8f357704e993bbb4e9ad3e20, type: 3}
-  - {fileID: 8300000, guid: 7ac37855d97150b49b29b4b83c32b3bb, type: 3}
+  - {fileID: 8300000, guid: 8a25fceb1ea7fc74594d95ee22d6ea98, type: 3}
   - {fileID: 8300000, guid: 8a25fceb1ea7fc74594d95ee22d6ea98, type: 3}
   - {fileID: 8300000, guid: 7ac37855d97150b49b29b4b83c32b3bb, type: 3}
-  - {fileID: 8300000, guid: 047e31ad8f357704e993bbb4e9ad3e20, type: 3}
-  - {fileID: 8300000, guid: 8a25fceb1ea7fc74594d95ee22d6ea98, type: 3}
+  - {fileID: 8300000, guid: 7ac37855d97150b49b29b4b83c32b3bb, type: 3}
+  - {fileID: 8300000, guid: 0ff2a353c11d96849972fccc2cb11cfd, type: 3}
+  - {fileID: 8300000, guid: 0ff2a353c11d96849972fccc2cb11cfd, type: 3}
+  - {fileID: 8300000, guid: 624cdc1e91dbaf04ba99fe19bfd8c950, type: 3}
+  - {fileID: 8300000, guid: 4bb1e1e04fb7f0d4eb03e03e2f6d1c61, type: 3}
+  - {fileID: 8300000, guid: 4bb1e1e04fb7f0d4eb03e03e2f6d1c61, type: 3}
   audioSource: {fileID: 1813050597}
 --- !u!4 &1257491307
 Transform:
