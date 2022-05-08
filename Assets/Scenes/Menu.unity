@@ -693,6 +693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneBackgroundMusic:
   - {fileID: 8300000, guid: 4bb1e1e04fb7f0d4eb03e03e2f6d1c61, type: 3}
+  - {fileID: 0}
   - {fileID: 8300000, guid: 10941011bbe3e7e478f662ceade5f4af, type: 3}
   - {fileID: 8300000, guid: 10941011bbe3e7e478f662ceade5f4af, type: 3}
   - {fileID: 8300000, guid: 8a25fceb1ea7fc74594d95ee22d6ea98, type: 3}
