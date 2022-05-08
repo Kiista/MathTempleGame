@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneBackgroundMusic : MonoBehaviour
 {
+    private static SceneBackgroundMusic instance;
+
     [SerializeField]
     private AudioClip[] sceneBackgroundMusic;
 
@@ -14,6 +16,12 @@ public class SceneBackgroundMusic : MonoBehaviour
 
     private void Start()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
         DontDestroyOnLoad(gameObject);
 
         SceneManager.activeSceneChanged += PlaySongForChangedScene;

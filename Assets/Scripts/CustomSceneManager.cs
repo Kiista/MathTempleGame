@@ -10,7 +10,6 @@ public class CustomSceneManager : MonoBehaviour {
 
     private static CustomSceneManager instance;
     
-
     public static void LoadScene (int sceneIndex) {
         if (instance != null) {
             instance.LoadSceneAnimated(sceneIndex);
@@ -49,6 +48,11 @@ public class CustomSceneManager : MonoBehaviour {
     }
 
     private void Start () {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         DontDestroyOnLoad(transform.parent);
         instance = this;
     }
