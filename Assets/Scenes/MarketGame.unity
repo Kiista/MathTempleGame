@@ -159,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 191.15656, y: -84.13074}
-  m_SizeDelta: {x: 389.0078, y: 89.1747}
+  m_AnchoredPosition: {x: 136.4, y: -71.863}
+  m_SizeDelta: {x: 204.3839, y: 59.5437}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &172688211
 MonoBehaviour:
@@ -557,7 +557,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1d2ef7db35996a74284c1f89f79e7ea5, type: 3}
-    m_FontSize: 40
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -568,7 +568,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Nacin Placanja
+  m_Text: "Na\u010Din Pla\u0107anja"
 --- !u!222 &927462337
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1d2ef7db35996a74284c1f89f79e7ea5, type: 3}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -647,7 +647,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Placanje
+  m_Text: "Pla\u0107anje"
 --- !u!222 &1252823337
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -692,8 +692,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -206.20312, y: -84.13074}
-  m_SizeDelta: {x: 389.0078, y: 89.1747}
+  m_AnchoredPosition: {x: -178.39725, y: -75.16525}
+  m_SizeDelta: {x: 212.3615, y: 62.9627}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1369719304
 MonoBehaviour:
@@ -864,7 +864,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1d2ef7db35996a74284c1f89f79e7ea5, type: 3}
-    m_FontSize: 130
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -900,8 +900,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.416, y: -60.55964}
-  m_SizeDelta: {x: 1120.8699, y: 749.8807}
+  m_AnchoredPosition: {x: -20.2913, y: -6.4995}
+  m_SizeDelta: {x: 383.3937, y: 162.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2112290347
 GameObject:
