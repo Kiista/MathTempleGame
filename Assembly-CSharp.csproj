@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\SceneBackgroundMusic.cs" />
     <Compile Include="Assets\Scripts\QuizScripts\GameEvents.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\DigitalMarket\PayingManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\IntroStory\NextScene.cs" />
     <Compile Include="Assets\TimskaIgra\PuzzleManager.cs" />
@@ -74,9 +75,11 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scripts\QuizScripts\QuizGameManager.cs" />
+    <Compile Include="Assets\DigitalMarket\MarketPiece.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\DigitalMarket\MarketManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
@@ -107,16 +110,16 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\CustomSceneManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\DigitalMarket\MarketSlot.cs" />
     <Compile Include="Assets\Scripts\QuizScripts\UIManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\QuizScripts\AnswerData.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\DigitalMarket\MarketManager.cs" />
-    <Compile Include="Assets\DigitalMarket\MarketPiece.cs" />
-    <Compile Include="Assets\DigitalMarket\MarketSlot.cs" />
-    <Compile Include="Assets\DigitalMarket\PayingManager.cs" />
+    <Compile Include="Assets\DigitalTableGame\TableManager.cs" />
+    <Compile Include="Assets\DigitalTableGame\TableSlot.cs" />
+    <Compile Include="Assets\DigitalTableGame\TablePiece.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
