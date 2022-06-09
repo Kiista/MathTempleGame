@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TableGame.unity
     guid: cbd4ae14336769141ad67b1f90c1bf96
   - enabled: 1
+    path: Assets/Scenes/DigitalTableGame.unity
+    guid: 9c36c9e51165f43469df9f8de5f5ac92
+  - enabled: 1
     path: Assets/Scenes/AfterTableGame.unity
     guid: dc52be97b618a754c81a71f8ad63a722
   - enabled: 1

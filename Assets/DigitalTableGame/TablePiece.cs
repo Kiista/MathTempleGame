@@ -12,7 +12,8 @@ public class TablePiece : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     private int myNumber;
     private TableSlot mySlot;
 
-    private RectTransform rectTransform;
+
+    public RectTransform rectTransform;
 
     private void Awake()
     {
@@ -38,7 +39,7 @@ public class TablePiece : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        canvasGroup.blocksRaycasts = true;
+        canvasGroup.blocksRaycasts = true;    
         Debug.Log(myNumber);
     }
 

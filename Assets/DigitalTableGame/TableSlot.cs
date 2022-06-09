@@ -7,11 +7,11 @@ public class TableSlot : MonoBehaviour, IDropHandler
 {
     private TablePiece heldPiece;
 
-    private RectTransform rectTransform;
+    private RectTransform slotRectTransform;
 
     private void Awake()
     {
-        rectTransform = GetComponent<RectTransform>();
+        slotRectTransform = GetComponent<RectTransform>();
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -19,11 +19,15 @@ public class TableSlot : MonoBehaviour, IDropHandler
         var dragObject = eventData.pointerDrag;
         if (dragObject != null)
         {
-            dragObject.GetComponent<RectTransform>().position = rectTransform.position;
+            dragObject.GetComponent<RectTransform>().position = slotRectTransform.position;
             heldPiece = dragObject.GetComponent<TablePiece>();
             heldPiece.SetSlot(this);
         }
-
+        else if(dragObject.transform.position != slotRectTransform.position)
+        {
+            dragObject.transform.position = heldPiece.rectTransform.position;
+        }
+       
         Debug.Log(heldPiece);
     }
 

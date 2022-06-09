@@ -693,7 +693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneBackgroundMusic:
   - {fileID: 8300000, guid: 4bb1e1e04fb7f0d4eb03e03e2f6d1c61, type: 3}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 4bb1e1e04fb7f0d4eb03e03e2f6d1c61, type: 3}
   - {fileID: 8300000, guid: 10941011bbe3e7e478f662ceade5f4af, type: 3}
   - {fileID: 8300000, guid: 10941011bbe3e7e478f662ceade5f4af, type: 3}
   - {fileID: 8300000, guid: 8a25fceb1ea7fc74594d95ee22d6ea98, type: 3}
@@ -703,6 +703,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0ff2a353c11d96849972fccc2cb11cfd, type: 3}
   - {fileID: 8300000, guid: 0ff2a353c11d96849972fccc2cb11cfd, type: 3}
   - {fileID: 8300000, guid: 624cdc1e91dbaf04ba99fe19bfd8c950, type: 3}
+  - {fileID: 8300000, guid: 4bb1e1e04fb7f0d4eb03e03e2f6d1c61, type: 3}
+  - {fileID: 8300000, guid: 4bb1e1e04fb7f0d4eb03e03e2f6d1c61, type: 3}
   - {fileID: 8300000, guid: 4bb1e1e04fb7f0d4eb03e03e2f6d1c61, type: 3}
   - {fileID: 8300000, guid: 4bb1e1e04fb7f0d4eb03e03e2f6d1c61, type: 3}
   audioSource: {fileID: 1813050597}
@@ -755,7 +757,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.030288145}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: -1.0775719}
+  m_AnchoredPosition: {x: -0.000030517578, y: -1.077568}
   m_SizeDelta: {x: -0.000061035, y: 8.1553}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1257730593
@@ -805,7 +807,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 86.15
+  m_fontSize: 85.95
   m_fontSizeBase: 43
   m_fontWeight: 400
   m_enableAutoSizing: 1
