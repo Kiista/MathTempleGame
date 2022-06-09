@@ -23,11 +23,6 @@ public class TableSlot : MonoBehaviour, IDropHandler
             heldPiece = dragObject.GetComponent<TablePiece>();
             heldPiece.SetSlot(this);
         }
-        else if(dragObject.transform.position != slotRectTransform.position)
-        {
-            dragObject.transform.position = heldPiece.rectTransform.position;
-        }
-       
         Debug.Log(heldPiece);
     }
 

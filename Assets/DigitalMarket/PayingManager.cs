@@ -44,7 +44,7 @@ public class PayingManager : MonoBehaviour
 
         if (filled)
         {
-            CustomSceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

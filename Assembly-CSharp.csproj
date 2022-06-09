@@ -68,6 +68,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TimskaIgra\PuzzleSlot.cs" />
     <Compile Include="Assets\MarketGame\MarketGameManager.cs" />
+    <Compile Include="Assets\DigitalTableGame\TableSlot.cs" />
     <Compile Include="Assets\KalendarIgra\CalendarManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
@@ -76,7 +77,9 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scripts\QuizScripts\QuizGameManager.cs" />
     <Compile Include="Assets\DigitalMarket\MarketPiece.cs" />
+    <Compile Include="Assets\DigitalTableGame\TableManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\DigitalTableGame\TablePiece.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\DigitalMarket\MarketManager.cs" />
@@ -117,9 +120,6 @@
     <Compile Include="Assets\Scripts\QuizScripts\AnswerData.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\DigitalTableGame\TableManager.cs" />
-    <Compile Include="Assets\DigitalTableGame\TableSlot.cs" />
-    <Compile Include="Assets\DigitalTableGame\TablePiece.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

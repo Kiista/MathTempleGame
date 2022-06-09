@@ -48,7 +48,7 @@ public class PuzzleManager : MonoBehaviour
 
         if (sum == 20 && filled)
         {
-            CustomSceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else if (sum != 20 && filled)
         {
